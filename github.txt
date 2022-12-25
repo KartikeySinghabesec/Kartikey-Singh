@@ -1,0 +1,67 @@
+n=int(input("enter the number"))
+sumation=1
+final=0
+for i in range(n,0,-1):
+    for j in range(i,0,-1):
+        sumation=sumation*j
+    final=final+sumation
+    sumation=1
+print(final)
+
+
+final=0
+def palindrome(n):
+    global r
+    global final
+    if (n==0):
+        if (r==final):
+            print("palindrome")
+        else:
+            print("NOT PALINDROME")
+    else:
+        u=n%10
+        final=(final)*10+u
+        n=n//10
+        palindrome(n)
+i=int(input("enter the number"))
+r=i
+palindrome(i)
+
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k,a,b;
+    int arr[]={};
+    printf("enter the total number of choclates: ");
+    scanf("%d",&k);
+    printf("the taste of each chochlates in the box are marked between 1 to 9 depending their taste\n");
+    
+
+    for(i=0;i<=k;i++)
+    {
+        printf("enter the name of each chochlate as in the box in number %d");
+        scanf("%d",&arr[i]);
+
+    }
+}
+
+
+#include <iostream>
+
+using namespace std;
+int series(int n)
+ 
+{
+   
+    return (8 * n * n) + 1;
+}
+int main()
+{
+   
+   int n;
+   cout<<"enter the nth term"<<endl;
+   cin >> n;
+    cout << series(n);
+    return 0;
+}
